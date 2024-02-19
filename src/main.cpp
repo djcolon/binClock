@@ -1,5 +1,11 @@
 #include <Arduino.h>
 
+// WiFi
+#include <ESP8266WiFi.h>          //https://github.com/esp8266/Arduino
+#include <DNSServer.h>
+#include <ESP8266WebServer.h>
+#include <WiFiManager.h>         //https://github.com/tzapu/WiFiManager
+
 #define INTERNAL_LED D4
 #define MIN_CLOCK D0
 #define MIN_LATCH D1
@@ -27,6 +33,7 @@ void updateHrRegister() {
 }
 
 void setup() {
+  // Pins
   pinMode(INTERNAL_LED, OUTPUT);
   pinMode(MIN_CLOCK, OUTPUT);
   pinMode(MIN_LATCH, OUTPUT);
@@ -34,7 +41,21 @@ void setup() {
   pinMode(HR_CLOCK, OUTPUT);
   pinMode(HR_LATCH, OUTPUT);
   pinMode(HR_DATA, OUTPUT);
+  // Serial
   Serial.begin(115200);
+  // WiFi
+  //Local intialization. Once its business is done, there is no need to keep it around
+  WiFiManager wifiManager;
+  //reset saved settings
+  //wifiManager.resetSettings();
+  
+  //fetches ssid and pass from eeprom and tries to connect
+  //if it does not connect it starts an access point with the specified name
+  //here  "AutoConnectAP"
+  //and goes into a blocking loop awaiting configuration
+  wifiManager.autoConnect("binClock");
+  //if you get here you have connected to the WiFi
+  Serial.println("Connected to WiFi. Starting.");
 }
 
 void loop() {
