@@ -32,11 +32,13 @@ union RegistersUnion {
 RegistersUnion registers;
 
 void updateRegisters() {
+  //shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register1);
   digitalWrite(LATCH, LOW);
-  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register1);
-  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register2);
+  digitalWrite(CLOCK, LOW);
   shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register3);
-  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register4);
+  digitalWrite(CLOCK, LOW);
+  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register2);
+  //shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register4);
   digitalWrite(LATCH, HIGH);
 }
 
@@ -68,8 +70,14 @@ void setup() {
   pinMode(DATA, OUTPUT);
   pinMode(CLOCK, OUTPUT);
   pinMode(LATCH, OUTPUT);
+  // Set leds to init.
+  registers.asStruct.register2 = 0;
+  updateRegisters();
   // Serial
   Serial.begin(115200);
+
+  registers.asStruct.register2 = 1;
+  updateRegisters();
   // WiFi
   //Local initialization. Once its business is done, there is no need to keep
   // it around.
@@ -84,6 +92,7 @@ void setup() {
   wifiManager.autoConnect("binClock");
   //if you get here you have connected to the WiFi
   Serial.println("Connected to WiFi. Starting.");
+  registers.asStruct.register2 = 4;
   // Getting time.
   initTime(TZ);
 }
@@ -100,7 +109,7 @@ void loop() {
   registers.asStruct.register2 = timeinfo.tm_min;
   registers.asStruct.register3 = timeinfo.tm_sec;
   
-  Serial.printf("%d:%d:%d\n", registers.asStruct.register1, registers.asStruct.register2, registers.asStruct.register3);
+  Serial.printf("%02d:%02d:%02d\n", registers.asStruct.register1, registers.asStruct.register2, registers.asStruct.register3);
 
   updateRegisters();
 
