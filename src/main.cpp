@@ -32,13 +32,15 @@ union RegistersUnion {
 RegistersUnion registers;
 
 void updateRegisters() {
-  //shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register1);
   digitalWrite(LATCH, LOW);
+  digitalWrite(CLOCK, LOW);
+  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register1);
+  digitalWrite(CLOCK, LOW);
+  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register2);
   digitalWrite(CLOCK, LOW);
   shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register3);
   digitalWrite(CLOCK, LOW);
-  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register2);
-  //shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register4);
+  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register4);
   digitalWrite(LATCH, HIGH);
 }
 
