@@ -20,8 +20,9 @@ const String TZ = "GMT0BST,M3.5.0/1,M10.5.0;";
 // Flags
 #define WRITEMSBFIRST
 #define DEBUG
-#define USEARDUINOSHIFT
+#define USEARDUINOSHIFTNO
 
+// Registers
 struct RegistersStruct
 {
   uint8_t register1;
@@ -38,6 +39,11 @@ union RegistersUnion
 
 RegistersUnion registers;
 
+// Mode and mode globals.
+enum Mode { binClock, pingpong };
+Mode mode = pingpong;
+bool pingPongLeft = true;
+
 // Shifts out our register in one go.
 // Arduino shiftOut may because of weird glitches?
 // Data is set on rising edge of clock. Hold time is 4.5ns (datasheet)
@@ -51,7 +57,7 @@ void shiftOut32()
   for (uint8_t i = 0; i < 32; i++)
   {
     #ifdef WRITEMSBFIRST
-      bit = !!(registers.asInt & (1 << (32 - i)));
+      bit = !!(registers.asInt & (1 << (31 - i)));
     #else
       bit = !!(registers.asInt & (1 << i));
     #endif
@@ -72,13 +78,13 @@ void ArduinoShiftOut32()
 {
   digitalWrite(LATCH, LOW);
   digitalWrite(CLOCK, LOW);
-  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register1);
+  shiftOut(DATA, CLOCK, LSBFIRST, registers.asStruct.register1);
   digitalWrite(CLOCK, LOW);
-  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register2);
+  shiftOut(DATA, CLOCK, LSBFIRST, registers.asStruct.register2);
   digitalWrite(CLOCK, LOW);
-  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register3);
+  shiftOut(DATA, CLOCK, LSBFIRST, registers.asStruct.register3);
   digitalWrite(CLOCK, LOW);
-  shiftOut(DATA, CLOCK, MSBFIRST, registers.asStruct.register4);
+  shiftOut(DATA, CLOCK, LSBFIRST, registers.asStruct.register4);
   digitalWrite(LATCH, HIGH);
 }
 
@@ -140,10 +146,11 @@ void setup()
   registers.asStruct.register2 = 4;
   // Getting time.
   initTime(TZ);
+  // Set registers to 1 for starters.
+  registers.asInt = 1;
 }
 
-void loop()
-{
+void modeClock() {
   // Get the latest time.
   struct tm timeinfo;
   if (!getLocalTime(&timeinfo))
@@ -167,4 +174,37 @@ void loop()
   #endif
 
   delay(1000);
+}
+
+// Makes a led go back and forth.
+void modePingPong() {
+  // Do we need to change dir?
+  if(registers.asInt & 1) {
+    pingPongLeft = true;
+  // 2147483648 = 2^31 i.e. highest bit on register set.
+  }
+  // Then shift.
+  if(pingPongLeft) {
+    registers.asInt = registers.asInt << 1;
+  } else {
+    registers.asInt = registers.asInt >> 1;
+  }
+  #ifdef USEARDUINOSHIFT
+    ArduinoShiftOut32();
+  #else
+    shiftOut32();
+  #endif
+  // Reverse other way?
+  if(registers.asInt & 2147483648) {
+    pingPongLeft = false;
+  }
+  delay(100);
+}
+
+void loop() {
+  if(mode == binClock) {
+    modeClock();
+  } else if (mode == pingpong) {
+    modePingPong();
+  }
 }
