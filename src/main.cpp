@@ -5,6 +5,7 @@
 #include <DNSServer.h>
 #include <ESP8266WebServer.h>
 #include <WiFiManager.h> //https://github.com/tzapu/WiFiManager
+#include <ESP8266mDNS.h>
 
 // Time
 // https://randomnerdtutorials.com/esp32-ntp-timezones-daylight-saving/
@@ -21,6 +22,9 @@ const String TZ = "GMT0BST,M3.5.0/1,M10.5.0;";
 #define WRITEMSBFIRST
 #define DEBUG
 #define USEARDUINOSHIFTNO
+
+// Config
+#define HOSTNAME "binClock"
 
 // Registers
 struct RegistersStruct
@@ -40,8 +44,8 @@ union RegistersUnion
 RegistersUnion registers;
 
 // Mode and mode globals.
-enum Mode { binClock, pingpong };
-Mode mode = pingpong;
+enum Mode { binClock, pingpong, showIp };
+Mode mode = showIp;
 bool pingPongLeft = true;
 
 // Shifts out our register in one go.
@@ -122,20 +126,21 @@ void setup()
   pinMode(LATCH, OUTPUT);
   digitalWrite(CLOCK, LOW);
   // Set leds to init.
-  registers.asStruct.register2 = 0;
+  registers.asInt = 1;
   shiftOut32();
   // Serial
   Serial.begin(115200);
 
-  registers.asStruct.register2 = 1;
+  registers.asInt = 3;
   shiftOut32();
+  // Set hostname.
+  WiFi.hostname(HOSTNAME);
   // WiFi
   // Local initialization. Once its business is done, there is no need to keep
   // it around.
   WiFiManager wifiManager;
   // reset saved settings
   // wifiManager.resetSettings();
-
   // fetches ssid and pass from eeprom and tries to connect
   // if it does not connect it starts an access point with the specified name
   // here  "AutoConnectAP"
@@ -143,7 +148,17 @@ void setup()
   wifiManager.autoConnect("binClock");
   // if you get here you have connected to the WiFi
   Serial.println("Connected to WiFi. Starting.");
-  registers.asStruct.register2 = 4;
+  registers.asInt = 7;
+  // Print out the IP.
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+  // Then set up MDNS
+  if (!MDNS.begin(HOSTNAME)) {
+    Serial.println("Error setting up MDNS responder!");
+  }
+  else {
+    Serial.println("Started MDNS");
+  }
   // Getting time.
   initTime(TZ);
   // Set registers to 1 for starters.
@@ -176,7 +191,7 @@ void modeClock() {
   delay(1000);
 }
 
-// Makes a led go back and forth.
+// Makes an LED go back and forth.
 void modePingPong() {
   // Do we need to change dir?
   if(registers.asInt & 1) {
@@ -201,10 +216,34 @@ void modePingPong() {
   delay(100);
 }
 
+// Shows the device IP on the LEDS.
+void modeShowIp() {
+  registers.asInt = WiFi.localIP();
+  #ifdef USEARDUINOSHIFT
+    ArduinoShiftOut32();
+  #else
+    shiftOut32();
+  #endif
+  delay(2000);
+}
+
+// Our main loop/
 void loop() {
-  if(mode == binClock) {
-    modeClock();
-  } else if (mode == pingpong) {
-    modePingPong();
+  // Run the appropriate mode.
+  switch(mode) {
+    case binClock:
+      modeClock();
+      break;
+    case pingpong:
+      modePingPong();
+      break;
+    case showIp:
+      modeShowIp();
+      break;
+    default:
+      modeClock();
+      break;
   }
+  // Allow MDNS processing
+  MDNS.update();
 }
