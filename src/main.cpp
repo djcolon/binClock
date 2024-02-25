@@ -159,6 +159,8 @@ void onButton1Press() {
   // Don't check the last item in the array. If we didn't find the current mode
   // in the array we'll assume it was the last, and set mode to the 0 position.
   Serial.println("Switching modes.");
+  // reset the registers.
+  registers.asInt = 1;
   // Calculate how many modes there are (compiler should be able to figure this
   // all out at compile time.)
   for(uint8_t i = 0; i < (sizeof(modes) / sizeof(Mode)) - 1; i++){
@@ -166,8 +168,7 @@ void onButton1Press() {
     if(modes[i] == mode) {
       Serial.printf("Matched mode %s, setting to %s.\n", getModeAsString(mode).c_str(), getModeAsString(modes[i+1]).c_str());
       mode = modes[i+1];
-      // reset the registers.
-      registers.asInt = 1;
+      
       return;
     }
   }
