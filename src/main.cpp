@@ -7,6 +7,8 @@
 #include <WiFiManager.h> //https://github.com/tzapu/WiFiManager
 #include <ESP8266mDNS.h>
 
+#include <EasyButton.h>
+
 // Time
 // https://randomnerdtutorials.com/esp32-ntp-timezones-daylight-saving/
 #include "time.h"
@@ -18,10 +20,16 @@ const String TZ = "GMT0BST,M3.5.0/1,M10.5.0;";
 #define LATCH D1
 #define DATA D2
 
+// Buttons
+#define BUTTON1 D6
+#define BUTTON2 D5
+EasyButton button1(BUTTON1);
+EasyButton button2(BUTTON2);
+
 // Flags
 #define WRITEMSBFIRST
-#define DEBUG
-#define USEARDUINOSHIFTNO
+#define DEBUGno
+#define USEARDUINOSHIFTno
 
 // Config
 #define HOSTNAME "binClock"
@@ -45,8 +53,23 @@ RegistersUnion registers;
 
 // Mode and mode globals.
 enum Mode { binClock, pingpong, showIp };
-Mode mode = showIp;
+Mode modes[3] = {
+  binClock, pingpong, showIp
+};
+Mode mode = binClock;
 bool pingPongLeft = true;
+
+// Reads button states.
+bool getButtonState(int buttonNumber) {
+  switch(buttonNumber) {
+    case 1:
+      return digitalRead(BUTTON1) == HIGH;
+    case 2:
+      return digitalRead(BUTTON2) == HIGH;
+    default:
+      return false;
+  }
+}
 
 // Shifts out our register in one go.
 // Arduino shiftOut may because of weird glitches?
@@ -117,6 +140,41 @@ void initTime(String timezone)
   setTimezone(timezone);
 }
 
+String getModeAsString(Mode mode) {
+  switch(mode) {
+    case binClock:
+      return "binClock";
+    case pingpong:
+      return "pingpong";
+    case showIp:
+      return "showIp";
+    default:
+      return "Unknown mode";
+  }
+}
+
+// Cycle through modes.
+void onButton1Press() {
+  // Loop through modes.
+  // Don't check the last item in the array. If we didn't find the current mode
+  // in the array we'll assume it was the last, and set mode to the 0 position.
+  Serial.println("Switching modes.");
+  // Calculate how many modes there are (compiler should be able to figure this
+  // all out at compile time.)
+  for(uint8_t i = 0; i < (sizeof(modes) / sizeof(Mode)) - 1; i++){
+    Serial.println(i);
+    if(modes[i] == mode) {
+      Serial.printf("Matched mode %s, setting to %s.\n", getModeAsString(mode).c_str(), getModeAsString(modes[i+1]).c_str());
+      mode = modes[i+1];
+      // reset the registers.
+      registers.asInt = 1;
+      return;
+    }
+  }
+  Serial.printf("Didn't match mode, setting to %s.", getModeAsString(modes[0]).c_str());
+  mode = modes[0];
+}
+
 void setup()
 {
   // Pins
@@ -124,6 +182,8 @@ void setup()
   pinMode(DATA, OUTPUT);
   pinMode(CLOCK, OUTPUT);
   pinMode(LATCH, OUTPUT);
+  pinMode(BUTTON1, INPUT);
+  pinMode(BUTTON2, INPUT);
   digitalWrite(CLOCK, LOW);
   // Set leds to init.
   registers.asInt = 1;
@@ -140,7 +200,12 @@ void setup()
   // it around.
   WiFiManager wifiManager;
   // reset saved settings
-  // wifiManager.resetSettings();
+  // Do we need to reset out wifi settings?
+  if(getButtonState(1) && getButtonState(2)) {
+    Serial.println("Resetting wifi settings.");
+    wifiManager.resetSettings();
+    ESP.restart();
+  }
   // fetches ssid and pass from eeprom and tries to connect
   // if it does not connect it starts an access point with the specified name
   // here  "AutoConnectAP"
@@ -161,6 +226,8 @@ void setup()
   }
   // Getting time.
   initTime(TZ);
+  // Set up button callbacks.
+  button1.onPressed(onButton1Press);
   // Set registers to 1 for starters.
   registers.asInt = 1;
 }
@@ -246,4 +313,7 @@ void loop() {
   }
   // Allow MDNS processing
   MDNS.update();
+  // Process buttons.
+  button1.read();
+  button2.read();
 }
