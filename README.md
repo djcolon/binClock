@@ -7,6 +7,9 @@ drive LEDs.
 Uses NTP to get time over the network.
 Also has modes to show it's IP and ping-pong a led back and forth.
 
+Built with an ESP32-C3 Mini, which I bought for 1.83
+[here](https://www.aliexpress.com/item/1005005967641936.html)
+
 ![The prototype](prototype.jpg?raw=true "The prototype")
 
 [Built using PlatformIO](https://platformio.org/)
