@@ -1,11 +1,11 @@
 #include <Arduino.h>
 
 // WiFi
-#include <ESP8266WiFi.h> //https://github.com/esp8266/Arduino
+#include <WiFi.h>
 #include <DNSServer.h>
-#include <ESP8266WebServer.h>
+#include <WebServer.h>
 #include <WiFiManager.h> //https://github.com/tzapu/WiFiManager
-#include <ESP8266mDNS.h>
+#include <mDNS.h>
 
 #include <EasyButton.h>
 
@@ -15,14 +15,14 @@
 const String TZ = "GMT0BST,M3.5.0/1,M10.5.0;";
 
 // Pins
-#define INTERNAL_LED D4
-#define CLOCK D0
-#define LATCH D1
-#define DATA D2
+#define INTERNAL_LED 8
+#define CLOCK 5
+#define LATCH 6
+#define DATA 7
 
 // Buttons
-#define BUTTON1 D6
-#define BUTTON2 D5
+#define BUTTON1 9
+#define BUTTON2 8
 EasyButton button1(BUTTON1);
 EasyButton button2(BUTTON2);
 
@@ -176,6 +176,21 @@ void onButton1Press() {
   mode = modes[0];
 }
 
+void startMdns()
+{
+    //initialize mDNS service
+    esp_err_t err = mdns_init();
+    if (err) {
+        printf("MDNS Init failed: %d\n", err);
+        return;
+    }
+
+    //set hostname
+    mdns_hostname_set(HOSTNAME);
+    //set default instance
+    mdns_instance_name_set(HOSTNAME);
+}
+
 void setup()
 {
   // Pins
@@ -219,12 +234,7 @@ void setup()
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
   // Then set up MDNS
-  if (!MDNS.begin(HOSTNAME)) {
-    Serial.println("Error setting up MDNS responder!");
-  }
-  else {
-    Serial.println("Started MDNS");
-  }
+  startMdns();
   // Getting time.
   initTime(TZ);
   // Set up button callbacks.
@@ -312,8 +322,6 @@ void loop() {
       modeClock();
       break;
   }
-  // Allow MDNS processing
-  MDNS.update();
   // Process buttons.
   button1.read();
   button2.read();
