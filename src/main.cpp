@@ -53,11 +53,11 @@ union RegistersUnion
 RegistersUnion registers;
 
 // Mode and mode globals.
-enum Mode { binClock, pingpong, showIp };
-Mode modes[3] = {
-  binClock, pingpong, showIp
+enum Mode { binClock, pingpong, showIp, allOn };
+Mode modes[4] = {
+  binClock, pingpong, showIp, allOn
 };
-Mode mode = binClock;
+Mode mode = allOn;
 bool pingPongLeft = true;
 
 // Other globals
@@ -153,6 +153,8 @@ String getModeAsString(Mode mode) {
       return "pingpong";
     case showIp:
       return "showIp";
+    case allOn:
+      return "allOn";
     default:
       return "Unknown mode";
   }
@@ -288,7 +290,7 @@ void modeClock() {
     shiftOut32();
   #endif
 
-  delay(1000);
+  delay(100);
 }
 
 // Makes an LED go back and forth.
@@ -324,7 +326,17 @@ void modeShowIp() {
   #else
     shiftOut32();
   #endif
-  delay(2000);
+  delay(100);
+}
+
+void modeAllOn() {
+  registers.asInt = UINT32_MAX;
+  #ifdef USEARDUINOSHIFT
+    ArduinoShiftOut32();
+  #else
+    shiftOut32();
+  #endif
+  delay(100);
 }
 
 // Our main loop/
@@ -339,6 +351,9 @@ void loop() {
       break;
     case showIp:
       modeShowIp();
+      break;
+    case allOn:
+      modeAllOn();
       break;
     default:
       modeClock();
