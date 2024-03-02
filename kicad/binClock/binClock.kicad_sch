@@ -4,320 +4,13 @@
 	(generator_version "8.0")
 	(uuid "8e173867-86ed-408f-a94c-ad0e841b8e9f")
 	(paper "A4")
+	(title_block
+		(title "binClock")
+		(date "2024-03-01")
+		(rev "1")
+		(company "Daniel Colon")
+	)
 	(lib_symbols
-		(symbol "Connector_Generic:Conn_02x04_Counter_Clockwise"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 1.27 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_02x04_Counter_Clockwise"
-				(at 1.27 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, double row, 02x04, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_2x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_02x04_Counter_Clockwise_1_1"
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 3.81)
-					(end 3.81 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start 3.81 -4.953)
-					(end 2.54 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 -2.413)
-					(end 2.54 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 0.127)
-					(end 2.54 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 2.667)
-					(end 2.54 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -5.08 180)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:C_Small"
 			(pin_numbers hide)
 			(pin_names
@@ -1100,7 +793,7 @@
 					(hide yes)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "footprints:DIP16-2.54-20.32X5.84MM"
 				(at 3.048 -18.542 0)
 				(effects
 					(font
@@ -1128,78 +821,8 @@
 					(hide yes)
 				)
 			)
-			(property "DigiKey_Part_Number" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "SnapEDA_Link" ""
-				(at 3.048 -18.542 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Description_1" ""
-				(at 3.048 -18.542 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Package" ""
-				(at -26.67 10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
 			(property "MPN" "74HC595N"
 				(at 0.762 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MF" ""
-				(at -19.05 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MP" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "Check_prices" ""
-				(at 7.874 -20.574 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1329,7 +952,7 @@
 					)
 				)
 				(pin power_in line
-					(at 7.62 12.7 0)
+					(at 12.7 12.7 180)
 					(length 5.08)
 					(name "VCC"
 						(effects
@@ -1519,6 +1142,566 @@
 						(effects
 							(font
 								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Mechanical:MountingHole_Pad"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "H"
+				(at 0 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Mounting Hole with connection"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
+				(circle
+					(center 0 1.27)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Switch:SW_Push"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "conn_02x04_clockwise:Conn_02x04_Clockwise"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 1.27 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_02x04_Clockwise"
+				(at 1.27 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, double row, 02x04, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_2x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_02x04_Clockwise_1_1"
+				(rectangle
+					(start -1.27 -6.35)
+					(end 3.81 3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start 0 -5.207)
+					(end -1.27 -4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0 -2.667)
+					(end -1.27 -2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0 -0.127)
+					(end -1.27 0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0 2.413)
+					(end -1.27 2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.54 -5.207)
+					(end 3.81 -4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.54 -2.667)
+					(end 3.81 -2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.54 -0.127)
+					(end 3.81 0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 2.54 2.413)
+					(end 3.81 2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -5.08 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
 							)
 						)
 					)
@@ -1749,6 +1932,18 @@
 		(uuid "23e674fa-2605-4509-8b18-a04af4bc2c42")
 	)
 	(junction
+		(at 95.25 149.86)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3714c5dc-917f-4021-bbdb-696b45a07f97")
+	)
+	(junction
+		(at 93.98 124.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3cb6056c-c8ea-442d-b48b-23a91a3d7d19")
+	)
+	(junction
 		(at 226.06 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1891,6 +2086,16 @@
 			(type default)
 		)
 		(uuid "0a448128-5722-44aa-aebc-d954f6268287")
+	)
+	(wire
+		(pts
+			(xy 106.68 128.27) (xy 106.68 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cbc4578-02cd-4d7c-9e0e-0d7e9d70af3a")
 	)
 	(wire
 		(pts
@@ -2134,6 +2339,16 @@
 	)
 	(wire
 		(pts
+			(xy 106.68 149.86) (xy 95.25 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30145cbb-da2f-4c95-b24c-5a8012f07ef6")
+	)
+	(wire
+		(pts
 			(xy 213.36 44.45) (xy 215.9 44.45)
 		)
 		(stroke
@@ -2221,6 +2436,16 @@
 			(type default)
 		)
 		(uuid "3f757887-d384-4089-b661-5a888ba3ebae")
+	)
+	(wire
+		(pts
+			(xy 93.98 124.46) (xy 121.92 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "408239f7-1c58-4fde-abcb-0375407b7aae")
 	)
 	(wire
 		(pts
@@ -2591,6 +2816,16 @@
 			(type default)
 		)
 		(uuid "7854bc1d-abe4-4daa-87f7-e0fee1d1a5e3")
+	)
+	(wire
+		(pts
+			(xy 121.92 128.27) (xy 106.68 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7bef6c28-2664-4bee-8ed7-83ebd438d69a")
 	)
 	(wire
 		(pts
@@ -3382,7 +3617,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02eae428-b10a-4890-8127-2afa1105340a")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR0115"
 			(at 106.68 91.44 0)
 			(effects
 				(font
@@ -3432,7 +3667,75 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR010")
+					(reference "#PWR0115")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 90.17 149.86 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "05b2ffd1-acf5-4178-a409-27104f34c474")
+		(property "Reference" "SW2"
+			(at 90.17 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 90.17 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
+			(at 90.17 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 90.17 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ba1c0976-fc33-4496-b075-74ca03c16458")
+		)
+		(pin "1"
+			(uuid "4816f1c6-8d1e-4d0b-9de7-86e5f5aba6af")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "SW2")
 					(unit 1)
 				)
 			)
@@ -3448,7 +3751,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "061552cf-7847-4498-97e6-68a505bec893")
-		(property "Reference" "#PWR07"
+		(property "Reference" "#PWR0101"
 			(at 165.1 91.44 0)
 			(effects
 				(font
@@ -3498,7 +3801,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR07")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -3513,7 +3816,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "0690b73c-7a03-4a41-9e08-b727c1c799c0")
-		(property "Reference" "R6"
+		(property "Reference" "R29"
 			(at 215.9 43.434 90)
 			(effects
 				(font
@@ -3521,7 +3824,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 219.71 44.45 90)
 			(effects
 				(font
@@ -3529,7 +3832,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 219.71 46.228 90)
 			(effects
 				(font
@@ -3565,7 +3868,141 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R6")
+					(reference "R29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 85.09 149.86 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "07f4b74c-d41b-451a-9181-077513201dbc")
+		(property "Reference" "#PWR0109"
+			(at 88.9 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 81.28 149.8599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 85.09 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "60e96e62-620f-4f3e-aaea-76a8e3ae029b")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR0109")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 25.4 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e5fe0d6-bdfe-4707-bdca-a6febe907b35")
+		(property "Reference" "H3"
+			(at 27.94 138.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 27.94 140.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_Pad_TopBottom"
+			(at 25.4 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 25.4 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 25.4 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cf4c8065-692a-45d7-b565-b91d6353e602")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -3580,7 +4017,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "108d93f1-829c-4add-8fdf-7fd960e4c291")
-		(property "Reference" "R22"
+		(property "Reference" "R16"
 			(at 120.65 40.64 90)
 			(effects
 				(font
@@ -3588,7 +4025,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "R"
 			(at 124.46 41.91 90)
 			(effects
 				(font
@@ -3596,7 +4033,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 124.46 43.688 90)
 			(effects
 				(font
@@ -3632,7 +4069,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R22")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -3647,7 +4084,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "123d4be6-eade-4c14-a52d-9adce7da336d")
-		(property "Reference" "R10"
+		(property "Reference" "R20"
 			(at 158.75 40.894 90)
 			(effects
 				(font
@@ -3655,7 +4092,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "R"
 			(at 162.56 41.91 90)
 			(effects
 				(font
@@ -3663,7 +4100,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 162.56 43.688 90)
 			(effects
 				(font
@@ -3699,24 +4136,155 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R10")
+					(reference "R20")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x04_Counter_Clockwise")
-		(at 115.57 41.91 0)
-		(mirror y)
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 86.36 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
+		(uuid "13cf683a-99a1-4df7-b1f9-e268c8b10acb")
+		(property "Reference" "H5"
+			(at 88.9 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_LED_Tower"
+			(at 88.9 26.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_TopBottom"
+			(at 86.36 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 86.36 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 86.36 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4b22ffc0-7af0-46e3-beaa-18c8bd430fb5")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 266.7 143.51 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1baef057-5369-4709-add3-d2495872db9b")
+		(property "Reference" "#PWR04"
+			(at 266.7 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 266.7 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 266.7 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 266.7 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "88a667cc-a8ce-4358-acb9-6982f841972f")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "conn_02x04_clockwise:Conn_02x04_Clockwise")
+		(at 113.03 41.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(uuid "1de587c5-7d0f-40e2-ab64-75b6857d6820")
-		(property "Reference" "J3"
+		(property "Reference" "J2"
 			(at 114.3 33.02 0)
 			(effects
 				(font
@@ -3724,7 +4292,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_02x04_Counter_Clockwise"
+		(property "Value" "Conn_02x04_Clockwise"
 			(at 114.3 35.56 0)
 			(effects
 				(font
@@ -3732,7 +4300,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
+		(property "Footprint" "footprints:PinHeader_2x04_P2.54mm_Vertical_Clockwise"
 			(at 115.57 41.91 0)
 			(effects
 				(font
@@ -3751,7 +4319,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x04, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 115.57 41.91 0)
+			(at 113.03 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3786,7 +4354,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "J3")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -3801,7 +4369,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "1e778dae-5ce1-478f-ad75-e9e51c4ec7c2")
-		(property "Reference" "R19"
+		(property "Reference" "R13"
 			(at 100.33 43.434 90)
 			(effects
 				(font
@@ -3809,7 +4377,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 104.14 44.45 90)
 			(effects
 				(font
@@ -3817,7 +4385,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 104.14 46.228 90)
 			(effects
 				(font
@@ -3853,7 +4421,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R19")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -3869,7 +4437,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "206ed8bd-bd50-48f1-9241-1732cdfcdcd5")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR0113"
 			(at 71.12 91.44 0)
 			(effects
 				(font
@@ -3919,7 +4487,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR014")
+					(reference "#PWR0113")
 					(unit 1)
 				)
 			)
@@ -3934,7 +4502,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2166acf7-c5dd-43e5-8362-149715fcea0d")
-		(property "Reference" "R25"
+		(property "Reference" "R1"
 			(at 43.18 38.354 90)
 			(effects
 				(font
@@ -3942,7 +4510,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "R"
 			(at 46.99 39.37 90)
 			(effects
 				(font
@@ -3950,7 +4518,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 46.99 41.148 90)
 			(effects
 				(font
@@ -3986,7 +4554,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R25")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -4002,7 +4570,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "234c3df7-baed-458f-9cf4-945d207b0680")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR0116"
 			(at 96.52 69.85 0)
 			(effects
 				(font
@@ -4052,7 +4620,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR09")
+					(reference "#PWR0116")
 					(unit 1)
 				)
 			)
@@ -4067,7 +4635,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "26291ef2-eb22-4a8c-9391-0864d81cdeca")
-		(property "Reference" "R4"
+		(property "Reference" "R34"
 			(at 236.22 45.974 90)
 			(effects
 				(font
@@ -4075,7 +4643,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 240.03 46.99 90)
 			(effects
 				(font
@@ -4083,7 +4651,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 240.03 48.768 90)
 			(effects
 				(font
@@ -4119,7 +4687,74 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R4")
+					(reference "R34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 83.82 124.46 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "28fa882a-1569-4d3d-bc74-c53969db90db")
+		(property "Reference" "#PWR0110"
+			(at 87.63 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 80.01 124.4599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 83.82 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c72c2071-27ac-43a0-862d-d7f4d69c1876")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR0110")
 					(unit 1)
 				)
 			)
@@ -4134,7 +4769,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2de495eb-3dc2-419c-a97c-fd07e448fa4c")
-		(property "Reference" "R16"
+		(property "Reference" "R26"
 			(at 179.07 45.974 90)
 			(effects
 				(font
@@ -4142,7 +4777,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 182.88 46.99 90)
 			(effects
 				(font
@@ -4150,7 +4785,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 182.88 48.768 90)
 			(effects
 				(font
@@ -4186,7 +4821,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R16")
+					(reference "R26")
 					(unit 1)
 				)
 			)
@@ -4202,7 +4837,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "31e24e96-8129-4ed8-a98c-495a854449b2")
-		(property "Reference" "U3"
+		(property "Reference" "U4"
 			(at 190.5 84.9884 0)
 			(effects
 				(font
@@ -4220,7 +4855,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:DIP16-2.54-20.32X5.84MM"
 			(at 155.448 85.598 0)
 			(effects
 				(font
@@ -4379,7 +5014,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "U3")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -4394,7 +5029,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "3e3ffe20-a088-4b2d-b40f-671293291a33")
-		(property "Reference" "R11"
+		(property "Reference" "R21"
 			(at 158.75 43.434 90)
 			(effects
 				(font
@@ -4402,7 +5037,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 162.56 44.45 90)
 			(effects
 				(font
@@ -4410,7 +5045,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 162.56 46.228 90)
 			(effects
 				(font
@@ -4446,7 +5081,77 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R11")
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 93.98 128.27 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3f2bb55f-a14b-4d5f-912e-3aa23c4efc5b")
+		(property "Reference" "R9"
+			(at 96.52 126.9999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "R"
+			(at 96.52 129.5399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 95.758 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 93.98 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 93.98 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "4a88c5a2-cdcc-4678-88a8-4877077a904c")
+		)
+		(pin "1"
+			(uuid "18dd5316-1f00-4793-860b-9fda7d45acc6")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -4461,7 +5166,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "42f8a314-cc77-4739-aefb-2c97c9f4f152")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR0121"
 			(at 255.27 95.25 0)
 			(effects
 				(font
@@ -4512,7 +5217,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR015")
+					(reference "#PWR0121")
 					(unit 1)
 				)
 			)
@@ -4528,7 +5233,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "44023597-d56b-422b-8094-9d4d44513d07")
-		(property "Reference" "C4"
+		(property "Reference" "C1"
 			(at 73.6663 88.9 90)
 			(effects
 				(font
@@ -4536,7 +5241,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "C_Small"
 			(at 73.6663 91.44 90)
 			(effects
 				(font
@@ -4544,7 +5249,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 73.66 95.25 0)
 			(effects
 				(font
@@ -4580,7 +5285,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "C4")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -4596,7 +5301,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "46bf0be7-992f-406c-a697-b95ce65b789c")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR0104"
 			(at 128.27 91.44 0)
 			(effects
 				(font
@@ -4646,7 +5351,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR011")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -4661,7 +5366,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4b60fc22-b03b-48e8-883f-62b87d78917d")
-		(property "Reference" "R28"
+		(property "Reference" "R4"
 			(at 43.18 45.974 90)
 			(effects
 				(font
@@ -4669,7 +5374,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 46.99 46.99 90)
 			(effects
 				(font
@@ -4677,7 +5382,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 46.99 48.768 90)
 			(effects
 				(font
@@ -4713,7 +5418,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R28")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -4728,7 +5433,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "4e339f82-2e5c-4f31-bac5-dc2edbe741b7")
-		(property "Reference" "R8"
+		(property "Reference" "R27"
 			(at 215.9 38.354 90)
 			(effects
 				(font
@@ -4736,7 +5441,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "R"
 			(at 219.71 39.37 90)
 			(effects
 				(font
@@ -4744,7 +5449,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 219.71 41.148 90)
 			(effects
 				(font
@@ -4780,7 +5485,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R8")
+					(reference "R27")
 					(unit 1)
 				)
 			)
@@ -4795,7 +5500,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "54b605a6-b4da-448b-b447-e8c69e04de5a")
-		(property "Reference" "R5"
+		(property "Reference" "R30"
 			(at 215.9 45.974 90)
 			(effects
 				(font
@@ -4803,7 +5508,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 219.71 46.99 90)
 			(effects
 				(font
@@ -4811,7 +5516,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 219.71 48.768 90)
 			(effects
 				(font
@@ -4847,7 +5552,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R5")
+					(reference "R30")
 					(unit 1)
 				)
 			)
@@ -4862,7 +5567,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5539953a-078e-4748-8d77-48ccbb563313")
-		(property "Reference" "R14"
+		(property "Reference" "R24"
 			(at 179.07 40.64 90)
 			(effects
 				(font
@@ -4870,7 +5575,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "R"
 			(at 182.88 41.91 90)
 			(effects
 				(font
@@ -4878,7 +5583,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 182.88 43.688 90)
 			(effects
 				(font
@@ -4914,7 +5619,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R14")
+					(reference "R24")
 					(unit 1)
 				)
 			)
@@ -4930,7 +5635,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "593d75f1-e619-4748-bd77-ce6fb0e01f77")
-		(property "Reference" "C1"
+		(property "Reference" "C4"
 			(at 246.3863 88.9 90)
 			(effects
 				(font
@@ -4938,7 +5643,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "C_Small"
 			(at 246.3863 91.44 90)
 			(effects
 				(font
@@ -4946,7 +5651,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 246.38 95.25 0)
 			(effects
 				(font
@@ -4982,7 +5687,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "C1")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -4997,7 +5702,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5be786a6-2df8-4f17-bd34-abfd7ab0e58a")
-		(property "Reference" "R15"
+		(property "Reference" "R25"
 			(at 179.07 43.434 90)
 			(effects
 				(font
@@ -5005,7 +5710,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 182.88 44.45 90)
 			(effects
 				(font
@@ -5013,7 +5718,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 182.88 46.228 90)
 			(effects
 				(font
@@ -5049,7 +5754,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R15")
+					(reference "R25")
 					(unit 1)
 				)
 			)
@@ -5064,7 +5769,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5d445d1d-7eca-43b1-a63a-efed2462c89a")
-		(property "Reference" "R27"
+		(property "Reference" "R3"
 			(at 43.18 43.434 90)
 			(effects
 				(font
@@ -5072,7 +5777,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 46.99 44.45 90)
 			(effects
 				(font
@@ -5080,7 +5785,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 46.99 46.228 90)
 			(effects
 				(font
@@ -5116,7 +5821,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R27")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -5131,7 +5836,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "610b7a05-43fb-44cc-ab40-407d98940cda")
-		(property "Reference" "#PWR03"
+		(property "Reference" "#PWR0120"
 			(at 243.84 91.44 0)
 			(effects
 				(font
@@ -5182,7 +5887,73 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR03")
+					(reference "#PWR0120")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 201.93 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "61b5cf54-410f-494f-9228-9b06920463eb")
+		(property "Reference" "#PWR06"
+			(at 201.93 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 201.93 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 201.93 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 201.93 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 201.93 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d39a1f98-6dcb-4f90-8705-ad2bed5b9a7e")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -5197,7 +5968,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "62252cff-fdc1-4870-befb-f6a009ec145e")
-		(property "Reference" "R32"
+		(property "Reference" "R8"
 			(at 63.5 45.974 90)
 			(effects
 				(font
@@ -5205,7 +5976,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 67.31 46.99 90)
 			(effects
 				(font
@@ -5213,7 +5984,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 67.31 48.768 90)
 			(effects
 				(font
@@ -5249,7 +6020,73 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R32")
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 86.36 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "62b6ec65-c085-4728-ad7b-25e19b9a6f89")
+		(property "Reference" "#PWR05"
+			(at 86.36 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 86.36 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 86.36 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8fdf02e4-cae3-4ac2-98f8-201e0e2c2286")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -5265,7 +6102,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "655cd7f5-2673-43e8-a5ab-fb57ee1ebaa4")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR0122"
 			(at 39.37 69.85 0)
 			(effects
 				(font
@@ -5315,24 +6152,22 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR012")
+					(reference "#PWR0122")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x04_Counter_Clockwise")
-		(at 173.99 41.91 0)
-		(mirror y)
+		(lib_id "conn_02x04_clockwise:Conn_02x04_Clockwise")
+		(at 171.45 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6eaaecfd-2630-4863-ae8a-7ed4f8399051")
-		(property "Reference" "J1"
+		(property "Reference" "J3"
 			(at 172.72 33.02 0)
 			(effects
 				(font
@@ -5340,7 +6175,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_02x04_Counter_Clockwise"
+		(property "Value" "Conn_02x04_Clockwise"
 			(at 172.72 35.56 0)
 			(effects
 				(font
@@ -5348,7 +6183,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
+		(property "Footprint" "footprints:PinHeader_2x04_P2.54mm_Vertical_Clockwise"
 			(at 173.99 41.91 0)
 			(effects
 				(font
@@ -5367,7 +6202,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x04, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 173.99 41.91 0)
+			(at 171.45 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5402,7 +6237,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "J1")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -5417,7 +6252,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "6f13777c-f23c-440b-a038-cb34c4fb0e8d")
-		(property "Reference" "#PWR04"
+		(property "Reference" "#PWR0105"
 			(at 125.73 151.13 0)
 			(effects
 				(font
@@ -5468,7 +6303,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR04")
+					(reference "#PWR0105")
 					(unit 1)
 				)
 			)
@@ -5483,7 +6318,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "70e4c71d-1cd6-4beb-b428-67e10d106e3a")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR0103"
 			(at 139.7 95.25 0)
 			(effects
 				(font
@@ -5534,7 +6369,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR017")
+					(reference "#PWR0103")
 					(unit 1)
 				)
 			)
@@ -5550,7 +6385,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "750d56fa-6361-4c2f-b1f8-fa4efa8e70eb")
-		(property "Reference" "#PWR05"
+		(property "Reference" "#PWR0118"
 			(at 222.25 91.44 0)
 			(effects
 				(font
@@ -5600,7 +6435,73 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR05")
+					(reference "#PWR0118")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 186.69 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7b4d685c-c53b-4cd8-888c-203226792fc8")
+		(property "Reference" "#PWR0112"
+			(at 186.69 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 186.69 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 186.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 186.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "deae22a0-cf89-4b82-a5b5-6006590e2efa")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR0112")
 					(unit 1)
 				)
 			)
@@ -5616,7 +6517,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7e06ea33-7658-49f5-9f9e-0a166bfadb40")
-		(property "Reference" "C2"
+		(property "Reference" "C3"
 			(at 189.2363 88.9 90)
 			(effects
 				(font
@@ -5624,7 +6525,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "C_Small"
 			(at 189.2363 91.44 90)
 			(effects
 				(font
@@ -5632,7 +6533,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 189.23 95.25 0)
 			(effects
 				(font
@@ -5668,7 +6569,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "C2")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -5684,7 +6585,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "81256553-3bf6-4e55-a3af-5830a25c8763")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR0106"
 			(at 115.57 147.32 0)
 			(effects
 				(font
@@ -5734,6 +6635,72 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR0106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 25.4 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8167be45-baee-4325-9bc1-477b0ce6c8ec")
+		(property "Reference" "#PWR01"
+			(at 25.4 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 25.4 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.4 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 25.4 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f07e5dbc-43ff-4f7d-b7bf-8c731186a604")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
 					(reference "#PWR01")
 					(unit 1)
 				)
@@ -5749,7 +6716,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "89c019f2-944d-47dd-acb3-a4d3fcb93bb1")
-		(property "Reference" "R9"
+		(property "Reference" "R19"
 			(at 158.75 38.354 90)
 			(effects
 				(font
@@ -5757,7 +6724,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "R"
 			(at 162.56 39.37 90)
 			(effects
 				(font
@@ -5765,7 +6732,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 162.56 41.148 90)
 			(effects
 				(font
@@ -5801,7 +6768,73 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R9")
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 93.98 132.08 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8ab8b6a0-6ade-4e23-921f-8fd5e3fc08ee")
+		(property "Reference" "#PWR0108"
+			(at 93.98 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 93.98 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 93.98 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fcfdc79d-bcef-4615-b10f-fa7b85245db1")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR0108")
 					(unit 1)
 				)
 			)
@@ -5816,7 +6849,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "8ac20e88-ea44-43e1-8a06-266275c1d02b")
-		(property "Reference" "R20"
+		(property "Reference" "R14"
 			(at 100.33 45.974 90)
 			(effects
 				(font
@@ -5824,7 +6857,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 104.14 46.99 90)
 			(effects
 				(font
@@ -5832,7 +6865,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 104.14 48.768 90)
 			(effects
 				(font
@@ -5868,7 +6901,144 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R20")
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 266.7 26.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8f517ef4-d419-4cee-929a-67cdb00d6545")
+		(property "Reference" "H2"
+			(at 269.24 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 269.24 26.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_Pad_TopBottom"
+			(at 266.7 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 266.7 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 266.7 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0cbb1fcb-e055-4dfe-9c17-f819c1e36bde")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 95.25 153.67 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "90d8b783-8d78-45d2-95ec-57d768221d43")
+		(property "Reference" "R10"
+			(at 97.79 152.3999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "R"
+			(at 97.79 154.9399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 97.028 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 95.25 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "79209e42-c889-494b-b63a-605453dfe9ed")
+		)
+		(pin "1"
+			(uuid "d7e2c7da-be07-4f4b-987e-3783a1c432e6")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -5883,7 +7053,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "90faa8b6-ce82-45ac-86f0-072348015346")
-		(property "Reference" "R17"
+		(property "Reference" "R11"
 			(at 100.33 38.354 90)
 			(effects
 				(font
@@ -5891,7 +7061,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "R"
 			(at 104.14 39.37 90)
 			(effects
 				(font
@@ -5899,7 +7069,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 104.14 41.148 90)
 			(effects
 				(font
@@ -5935,7 +7105,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R17")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -5951,7 +7121,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "93217d70-ae3b-4964-b40b-7dcdf6d0cbb0")
-		(property "Reference" "C3"
+		(property "Reference" "C2"
 			(at 130.8163 88.9 90)
 			(effects
 				(font
@@ -5959,7 +7129,7 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
+		(property "Value" "C_Small"
 			(at 130.8163 91.44 90)
 			(effects
 				(font
@@ -5967,7 +7137,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm"
 			(at 130.81 95.25 0)
 			(effects
 				(font
@@ -6003,7 +7173,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "C3")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -6019,7 +7189,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "93f1fb5f-4921-4ea9-a1b9-09d9931d1dab")
-		(property "Reference" "U1"
+		(property "Reference" "U3"
 			(at 139.7 116.84 0)
 			(effects
 				(font
@@ -6035,7 +7205,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:MODULE_ESP32-C3_SUPERMINI"
 			(at 139.7 139.7 0)
 			(effects
 				(font
@@ -6234,7 +7404,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "U1")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -6249,7 +7419,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "942cbd49-b949-4fe8-9449-d9e3e4749abf")
-		(property "Reference" "R23"
+		(property "Reference" "R17"
 			(at 120.65 43.434 90)
 			(effects
 				(font
@@ -6257,7 +7427,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 124.46 44.45 90)
 			(effects
 				(font
@@ -6265,7 +7435,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 124.46 46.228 90)
 			(effects
 				(font
@@ -6301,7 +7471,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R23")
+					(reference "R17")
 					(unit 1)
 				)
 			)
@@ -6316,7 +7486,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "970db740-25f1-4f88-8237-51cb804c16c6")
-		(property "Reference" "R29"
+		(property "Reference" "R5"
 			(at 63.5 37.846 90)
 			(effects
 				(font
@@ -6324,7 +7494,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "R"
 			(at 67.31 39.37 90)
 			(effects
 				(font
@@ -6332,7 +7502,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 67.31 41.148 90)
 			(effects
 				(font
@@ -6368,7 +7538,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R29")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -6383,7 +7553,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "9d6c6cc1-53b1-48d1-9ac2-fbab4253ca45")
-		(property "Reference" "R26"
+		(property "Reference" "R2"
 			(at 43.18 40.894 90)
 			(effects
 				(font
@@ -6391,7 +7561,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "R"
 			(at 46.99 41.91 90)
 			(effects
 				(font
@@ -6399,7 +7569,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 46.99 43.688 90)
 			(effects
 				(font
@@ -6435,73 +7605,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 186.69 95.25 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9d709728-db5a-45c7-afbe-977edfa7a0e3")
-		(property "Reference" "#PWR08"
-			(at 186.69 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 186.69 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 186.69 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 186.69 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b8296908-a13c-4f44-a469-227788a4d291")
-		)
-		(instances
-			(project "binClock"
-				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR08")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -6516,7 +7620,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a2e016ff-4d47-46ce-bcf9-d834e4349130")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR0111"
 			(at 198.12 95.25 0)
 			(effects
 				(font
@@ -6567,7 +7671,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR016")
+					(reference "#PWR0111")
 					(unit 1)
 				)
 			)
@@ -6582,7 +7686,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "a3976ea0-a81b-4d47-84c2-cd159233bb1e")
-		(property "Reference" "R21"
+		(property "Reference" "R15"
 			(at 120.65 37.846 90)
 			(effects
 				(font
@@ -6590,7 +7694,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "R"
 			(at 124.46 39.37 90)
 			(effects
 				(font
@@ -6598,7 +7702,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 124.46 41.148 90)
 			(effects
 				(font
@@ -6634,24 +7738,22 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R21")
+					(reference "R15")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x04_Counter_Clockwise")
-		(at 231.14 41.91 0)
-		(mirror y)
+		(lib_id "conn_02x04_clockwise:Conn_02x04_Clockwise")
+		(at 228.6 41.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a531c830-57cd-4d9a-9dd6-681f16c73dde")
-		(property "Reference" "J2"
+		(property "Reference" "J4"
 			(at 229.87 33.02 0)
 			(effects
 				(font
@@ -6659,7 +7761,7 @@
 				)
 			)
 		)
-		(property "Value" "Conn_02x04_Counter_Clockwise"
+		(property "Value" "Conn_02x04_Clockwise"
 			(at 229.87 35.56 0)
 			(effects
 				(font
@@ -6667,7 +7769,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
+		(property "Footprint" "footprints:PinHeader_2x04_P2.54mm_Vertical_Clockwise"
 			(at 231.14 41.91 0)
 			(effects
 				(font
@@ -6686,7 +7788,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x04, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 231.14 41.91 0)
+			(at 228.6 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6721,7 +7823,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "J2")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -6736,7 +7838,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b2f2dc58-758b-46dc-912e-62015cb0443f")
-		(property "Reference" "R24"
+		(property "Reference" "R18"
 			(at 120.65 45.974 90)
 			(effects
 				(font
@@ -6744,7 +7846,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 124.46 46.99 90)
 			(effects
 				(font
@@ -6752,7 +7854,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 124.46 48.768 90)
 			(effects
 				(font
@@ -6788,7 +7890,74 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R24")
+					(reference "R18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 25.4 26.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b56b259c-b321-4f9a-99ec-b807f8377878")
+		(property "Reference" "H1"
+			(at 27.94 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 27.94 26.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_Pad_TopBottom"
+			(at 25.4 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 25.4 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 25.4 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "317d36e0-2b5f-4093-8d06-7f7819bc1233")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -6803,7 +7972,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "b84a58ee-eaf4-45bc-8be6-f3ddbb8fa1ad")
-		(property "Reference" "R31"
+		(property "Reference" "R7"
 			(at 63.5 43.434 90)
 			(effects
 				(font
@@ -6811,7 +7980,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 67.31 44.45 90)
 			(effects
 				(font
@@ -6819,7 +7988,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 67.31 46.228 90)
 			(effects
 				(font
@@ -6855,7 +8024,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R31")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -6870,7 +8039,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bbdd4a0a-67e0-42a2-9299-a2747e0a0a8f")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR0114"
 			(at 82.55 95.25 0)
 			(effects
 				(font
@@ -6921,7 +8090,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR018")
+					(reference "#PWR0114")
 					(unit 1)
 				)
 			)
@@ -6936,7 +8105,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "bce7be4e-5d42-465a-bc52-460b2f9fcc84")
-		(property "Reference" "R12"
+		(property "Reference" "R22"
 			(at 158.75 45.974 90)
 			(effects
 				(font
@@ -6944,7 +8113,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 162.56 46.99 90)
 			(effects
 				(font
@@ -6952,7 +8121,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 162.56 48.768 90)
 			(effects
 				(font
@@ -6988,7 +8157,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R12")
+					(reference "R22")
 					(unit 1)
 				)
 			)
@@ -7003,7 +8172,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c0c42bcb-a7bb-4373-b56c-b5e5ba5572ba")
-		(property "Reference" "R7"
+		(property "Reference" "R28"
 			(at 215.9 40.894 90)
 			(effects
 				(font
@@ -7011,7 +8180,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "R"
 			(at 219.71 41.91 90)
 			(effects
 				(font
@@ -7019,7 +8188,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 219.71 43.688 90)
 			(effects
 				(font
@@ -7055,7 +8224,207 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R7")
+					(reference "R28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 201.93 26.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c4e07b23-148f-41ac-a52b-76f8a37f23d5")
+		(property "Reference" "H6"
+			(at 204.47 24.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_LED_Tower"
+			(at 204.47 26.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2_Pad_TopBottom"
+			(at 201.93 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 201.93 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 201.93 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c61338cc-36a6-417f-aca1-af505076623e")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "H6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 266.7 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c60d7f15-6595-4c43-bd0c-326e6b824c85")
+		(property "Reference" "#PWR02"
+			(at 266.7 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 266.7 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 266.7 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 266.7 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 266.7 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "166e04b8-2d70-4935-b29b-5c8f5d894ec3")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 266.7 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c6327b6a-431b-4472-aabe-2cbf5cbce79f")
+		(property "Reference" "H4"
+			(at 269.24 138.4299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 269.24 140.9699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_Pad_TopBottom"
+			(at 266.7 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 266.7 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 266.7 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "66235f90-73ea-4313-9807-660b069c955f")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -7071,7 +8440,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c7a98f22-d372-4d7c-9394-b27dec3b7b45")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR0117"
 			(at 49.53 91.44 0)
 			(effects
 				(font
@@ -7121,7 +8490,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR013")
+					(reference "#PWR0117")
 					(unit 1)
 				)
 			)
@@ -7136,7 +8505,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c7d40f5e-adcc-4ada-83ed-3891cdda1762")
-		(property "Reference" "R30"
+		(property "Reference" "R6"
 			(at 63.5 40.64 90)
 			(effects
 				(font
@@ -7144,7 +8513,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "R"
 			(at 67.31 41.91 90)
 			(effects
 				(font
@@ -7152,7 +8521,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 67.31 43.688 90)
 			(effects
 				(font
@@ -7188,7 +8557,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R30")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -7203,7 +8572,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c7f60f04-9f96-4bf4-a6aa-8990221c5198")
-		(property "Reference" "R2"
+		(property "Reference" "R32"
 			(at 236.22 40.64 90)
 			(effects
 				(font
@@ -7211,7 +8580,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "R"
 			(at 240.03 41.91 90)
 			(effects
 				(font
@@ -7219,7 +8588,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 240.03 43.688 90)
 			(effects
 				(font
@@ -7255,7 +8624,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R2")
+					(reference "R32")
 					(unit 1)
 				)
 			)
@@ -7270,7 +8639,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "c9c33e89-4194-4461-aa6c-3d75d834b39d")
-		(property "Reference" "R18"
+		(property "Reference" "R12"
 			(at 100.33 40.894 90)
 			(effects
 				(font
@@ -7278,7 +8647,7 @@
 				)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "R"
 			(at 104.14 41.91 90)
 			(effects
 				(font
@@ -7286,7 +8655,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 104.14 43.688 90)
 			(effects
 				(font
@@ -7322,7 +8691,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R18")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -7338,7 +8707,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cd3ebce8-0393-4ec2-821f-af10c33743f2")
-		(property "Reference" "U5"
+		(property "Reference" "U1"
 			(at 74.93 84.9884 0)
 			(effects
 				(font
@@ -7356,7 +8725,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:DIP16-2.54-20.32X5.84MM"
 			(at 39.878 85.598 0)
 			(effects
 				(font
@@ -7515,7 +8884,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "U5")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -7530,7 +8899,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "cd698ec6-bddd-4a03-96af-caa369adc9e9")
-		(property "Reference" "R3"
+		(property "Reference" "R33"
 			(at 236.22 43.434 90)
 			(effects
 				(font
@@ -7538,7 +8907,7 @@
 				)
 			)
 		)
-		(property "Value" "200R"
+		(property "Value" "R"
 			(at 240.03 44.45 90)
 			(effects
 				(font
@@ -7546,7 +8915,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 240.03 46.228 90)
 			(effects
 				(font
@@ -7582,7 +8951,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R3")
+					(reference "R33")
 					(unit 1)
 				)
 			)
@@ -7598,7 +8967,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cfd913c7-94e1-43fc-8006-ba3cd217e67e")
-		(property "Reference" "U4"
+		(property "Reference" "U2"
 			(at 132.08 84.9884 0)
 			(effects
 				(font
@@ -7616,7 +8985,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:DIP16-2.54-20.32X5.84MM"
 			(at 97.028 85.598 0)
 			(effects
 				(font
@@ -7775,7 +9144,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "U4")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -7791,7 +9160,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d63368ff-b9e7-43e2-a2e3-60f43c6766ab")
-		(property "Reference" "#PWR06"
+		(property "Reference" "#PWR0102"
 			(at 154.94 69.85 0)
 			(effects
 				(font
@@ -7841,7 +9210,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR06")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -7856,7 +9225,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d8b1863f-d9da-4d2b-a0ae-94794ddaad32")
-		(property "Reference" "R13"
+		(property "Reference" "R23"
 			(at 179.07 37.846 90)
 			(effects
 				(font
@@ -7864,7 +9233,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "R"
 			(at 182.88 39.37 90)
 			(effects
 				(font
@@ -7872,7 +9241,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 182.88 41.148 90)
 			(effects
 				(font
@@ -7908,7 +9277,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R13")
+					(reference "R23")
 					(unit 1)
 				)
 			)
@@ -7923,7 +9292,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "dd1054dc-d684-4885-80ea-1db63d0c3dbb")
-		(property "Reference" "R1"
+		(property "Reference" "R31"
 			(at 236.22 37.846 90)
 			(effects
 				(font
@@ -7931,7 +9300,7 @@
 				)
 			)
 		)
-		(property "Value" "510R"
+		(property "Value" "R"
 			(at 240.03 39.37 90)
 			(effects
 				(font
@@ -7939,7 +9308,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 240.03 41.148 90)
 			(effects
 				(font
@@ -7975,7 +9344,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "R1")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -7991,7 +9360,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "df965a0d-aad7-4612-960a-db36bbd9062a")
-		(property "Reference" "U2"
+		(property "Reference" "U5"
 			(at 247.65 84.9884 0)
 			(effects
 				(font
@@ -8009,7 +9378,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:DIP16-2.54-20.32X5.84MM"
 			(at 212.598 85.598 0)
 			(effects
 				(font
@@ -8037,78 +9406,8 @@
 				(hide yes)
 			)
 		)
-		(property "DigiKey_Part_Number" ""
-			(at 231.14 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" ""
-			(at 212.598 85.598 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Description_1" ""
-			(at 212.598 85.598 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Package" ""
-			(at 241.3 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
 		(property "MPN" "74HC595N"
 			(at 231.14 83.312 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MF" ""
-			(at 234.95 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MP" ""
-			(at 231.14 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" ""
-			(at 210.566 90.424 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8168,40 +9467,238 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "U2")
+					(reference "U5")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x04_Counter_Clockwise")
-		(at 58.42 41.91 0)
-		(mirror y)
+		(lib_id "power:GND")
+		(at 95.25 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
+		(uuid "e15207bc-a634-4e7f-9389-3bfa1f29de07")
+		(property "Reference" "#PWR0107"
+			(at 95.25 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 95.25 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 95.25 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 95.25 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "de945a17-24d3-425d-89ef-36b383d8bcf9")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR0107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 88.9 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e81dca1e-a996-47e0-bb00-2b6b814857df")
+		(property "Reference" "SW1"
+			(at 88.9 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 88.9 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm"
+			(at 88.9 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.9 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 88.9 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "2c3dfdac-5d58-4b3a-be32-bc6da33e1f33")
+		)
+		(pin "1"
+			(uuid "ad1647e8-96dc-4102-a046-1a872cf48570")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 25.4 143.51 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e88e5967-6be6-45a5-b44a-2013a8f9323a")
+		(property "Reference" "#PWR03"
+			(at 25.4 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 25.4 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.4 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 25.4 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "41cda5dd-9859-4709-b478-a5d02a4d2beb")
+		)
+		(instances
+			(project "binClock"
+				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "conn_02x04_clockwise:Conn_02x04_Clockwise")
+		(at 55.88 41.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(uuid "e914be43-0a99-4a2f-8043-e1033e2525f6")
-		(property "Reference" "J4"
-			(at 57.15 33.02 0)
+		(property "Reference" "J1"
+			(at 57.15 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "Conn_02x04_Counter_Clockwise"
-			(at 57.15 35.56 0)
+		(property "Value" "Conn_02x04_Clockwise"
+			(at 57.15 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
+		(property "Footprint" "footprints:PinHeader_2x04_P2.54mm_Vertical_Clockwise"
 			(at 58.42 41.91 0)
 			(effects
 				(font
@@ -8220,7 +9717,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x04, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 58.42 41.91 0)
+			(at 55.88 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8255,7 +9752,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "J4")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -8271,7 +9768,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f61a226d-5a1d-47f3-a7c6-576473ff8019")
-		(property "Reference" "#PWR02"
+		(property "Reference" "#PWR0119"
 			(at 212.09 69.85 0)
 			(effects
 				(font
@@ -8321,7 +9818,7 @@
 		(instances
 			(project "binClock"
 				(path "/8e173867-86ed-408f-a94c-ad0e841b8e9f"
-					(reference "#PWR02")
+					(reference "#PWR0119")
 					(unit 1)
 				)
 			)
