@@ -22,11 +22,15 @@ via the ESP32's USB-C connector.
 
 ## Images
 
+The prototype:
+
 ![The prototype](prototype.jpg?raw=true "The prototype")
 
-The old prototype using an ESP8266
+The schematic:
 
 ![The schematic](schematic.png?raw=true "The schematic")
+
+A preview of the PCB front:
 
 ![The PCB preview](pcb.png?raw=true "The PCB preview")
 

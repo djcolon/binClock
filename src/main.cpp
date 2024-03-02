@@ -57,7 +57,7 @@ enum Mode { binClock, pingpong, showIp, allOn };
 Mode modes[4] = {
   binClock, pingpong, showIp, allOn
 };
-Mode mode = allOn;
+Mode mode = binClock;
 bool pingPongLeft = true;
 
 // Other globals
