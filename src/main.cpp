@@ -16,13 +16,14 @@ const String TZ = "GMT0BST,M3.5.0/1,M10.5.0;";
 
 // Pins
 #define INTERNAL_LED 8
-#define CLOCK 5
-#define LATCH 6
-#define DATA 7
+#define CLOCK 8
+#define LATCH 7
+#define DATA 6
+#define OE 5
 
 // Buttons
-#define BUTTON1 9
-#define BUTTON2 8
+#define BUTTON1 0
+#define BUTTON2 1
 EasyButton button1(BUTTON1);
 EasyButton button2(BUTTON2);
 
@@ -58,6 +59,10 @@ Mode modes[3] = {
 };
 Mode mode = binClock;
 bool pingPongLeft = true;
+
+// Other globals
+// Brightness is inverted!
+uint8_t brightness = 0;
 
 // Reads button states.
 bool getButtonState(int buttonNumber) {
@@ -176,6 +181,20 @@ void onButton1Press() {
   mode = modes[0];
 }
 
+// Cycle brightness.
+void onButton2Press() {
+  // 0 is full brightness, 255 is off.
+  if(brightness == 255) {
+    brightness = 0;
+  } else {
+    brightness = brightness + 64;
+  }
+  #ifdef DEBUG
+    Serial.printf("Setting brightness to: %d.\n", brightness);
+  #endif
+  analogWrite(OE, brightness);
+}
+
 void startMdns()
 {
     //initialize mDNS service
@@ -198,9 +217,11 @@ void setup()
   pinMode(DATA, OUTPUT);
   pinMode(CLOCK, OUTPUT);
   pinMode(LATCH, OUTPUT);
+  pinMode(OE, OUTPUT);
   pinMode(BUTTON1, INPUT);
   pinMode(BUTTON2, INPUT);
   digitalWrite(CLOCK, LOW);
+  analogWrite(OE, brightness);
   // Set leds to init.
   registers.asInt = 1;
   shiftOut32();
@@ -239,6 +260,7 @@ void setup()
   initTime(TZ);
   // Set up button callbacks.
   button1.onPressed(onButton1Press);
+  button2.onPressed(onButton2Press);
   // Set registers to 1 for starters.
   registers.asInt = 1;
 }
