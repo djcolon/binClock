@@ -6,9 +6,6 @@
 */
 class ModeInterface {
     public:
-        ModeInterface(){}
-        virtual ~ModeInterface(){}
-
         /**
          * Name for this mode used to display to users.
         */
@@ -30,5 +27,4 @@ class ModeInterface {
          * Called when the mode is deactivated (switched away from).
         */
         virtual void deactivate(Registers* registers = nullptr) = 0;
-
 };
