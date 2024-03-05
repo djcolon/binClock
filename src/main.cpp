@@ -278,11 +278,7 @@ void modePingPong() {
   } else {
     registers.asInt = registers.asInt >> 1;
   }
-#ifdef USEARDUINOSHIFT
-  ArduinoShiftOut32();
-#else
   shiftOut32();
-#endif
   // Reverse other way?
   if(registers.asInt & 2147483648) {
     pingPongLeft = false;
