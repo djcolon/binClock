@@ -38,7 +38,7 @@
 EasyButton button1(BUTTON1);
 EasyButton button2(BUTTON2);
 
-RegistersUnion registers;
+Registers registers;
 
 // Mode and mode globals.
 enum Mode { binClock, pingpong, showIp, allOn };

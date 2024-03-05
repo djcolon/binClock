@@ -9,7 +9,7 @@ struct RegistersStruct
   uint8_t register4;
 };
 
-union RegistersUnion
+union Registers
 {
   uint32_t asInt;
   RegistersStruct asStruct;
