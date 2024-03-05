@@ -1,19 +1,20 @@
+// Libraries ///////////////////////////////////////////////////////////////////
 #include <Arduino.h>
-
 // WiFi
 #include <WiFi.h>
 #include <DNSServer.h>
 #include <WebServer.h>
 #include <WiFiManager.h> //https://github.com/tzapu/WiFiManager
 #include <mDNS.h>
-
+// Buttons
 #include <EasyButton.h>
-
 // Time
-// https://randomnerdtutorials.com/esp32-ntp-timezones-daylight-saving/
 #include "time.h"
-const String TZ = "GMT0BST,M3.5.0/1,M10.5.0;";
 
+// Includes ////////////////////////////////////////////////////////////////////
+#include "registers.cpp"
+
+// Definitions /////////////////////////////////////////////////////////////////
 // Pins
 #define INTERNAL_LED 8
 #define CLOCK 8
@@ -24,31 +25,18 @@ const String TZ = "GMT0BST,M3.5.0/1,M10.5.0;";
 // Buttons
 #define BUTTON1 0
 #define BUTTON2 1
-EasyButton button1(BUTTON1);
-EasyButton button2(BUTTON2);
 
 // Flags
 #define WRITEMSBFIRST
-#define DEBUGno
-#define USEARDUINOSHIFTno
+//#define DEBUG
 
 // Config
 #define HOSTNAME "binClock"
+#define TZ "GMT0BST,M3.5.0/1,M10.5.0;"
 
-// Registers
-struct RegistersStruct
-{
-  uint8_t register1;
-  uint8_t register2;
-  uint8_t register3;
-  uint8_t register4;
-};
-
-union RegistersUnion
-{
-  uint32_t asInt;
-  RegistersStruct asStruct;
-};
+// Globals /////////////////////////////////////////////////////////////////////
+EasyButton button1(BUTTON1);
+EasyButton button2(BUTTON2);
 
 RegistersUnion registers;
 
@@ -63,6 +51,8 @@ bool pingPongLeft = true;
 // Other globals
 // Brightness is inverted!
 uint8_t brightness = 0;
+
+// Functions ///////////////////////////////////////////////////////////////////
 
 // Reads button states.
 bool getButtonState(int buttonNumber) {
@@ -104,20 +94,6 @@ void shiftOut32()
   #ifdef DEBUG
     Serial.print('\n');
   #endif
-}
-
-void ArduinoShiftOut32()
-{
-  digitalWrite(LATCH, LOW);
-  digitalWrite(CLOCK, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, registers.asStruct.register1);
-  digitalWrite(CLOCK, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, registers.asStruct.register2);
-  digitalWrite(CLOCK, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, registers.asStruct.register3);
-  digitalWrite(CLOCK, LOW);
-  shiftOut(DATA, CLOCK, LSBFIRST, registers.asStruct.register4);
-  digitalWrite(LATCH, HIGH);
 }
 
 // Sets TZ from POSIX style TZ.
@@ -284,11 +260,7 @@ void modeClock() {
     Serial.printf("%02d:%02d:%02d\n", registers.asStruct.register1, registers.asStruct.register2, registers.asStruct.register3);
   #endif
 
-  #ifdef USEARDUINOSHIFT
-    ArduinoShiftOut32();
-  #else
-    shiftOut32();
-  #endif
+  shiftOut32();
 
   delay(100);
 }
@@ -306,11 +278,11 @@ void modePingPong() {
   } else {
     registers.asInt = registers.asInt >> 1;
   }
-  #ifdef USEARDUINOSHIFT
-    ArduinoShiftOut32();
-  #else
-    shiftOut32();
-  #endif
+#ifdef USEARDUINOSHIFT
+  ArduinoShiftOut32();
+#else
+  shiftOut32();
+#endif
   // Reverse other way?
   if(registers.asInt & 2147483648) {
     pingPongLeft = false;
@@ -321,21 +293,13 @@ void modePingPong() {
 // Shows the device IP on the LEDS.
 void modeShowIp() {
   registers.asInt = WiFi.localIP();
-  #ifdef USEARDUINOSHIFT
-    ArduinoShiftOut32();
-  #else
-    shiftOut32();
-  #endif
+  shiftOut32();
   delay(100);
 }
 
 void modeAllOn() {
   registers.asInt = UINT32_MAX;
-  #ifdef USEARDUINOSHIFT
-    ArduinoShiftOut32();
-  #else
-    shiftOut32();
-  #endif
+  shiftOut32();
   delay(100);
 }
 

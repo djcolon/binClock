@@ -34,3 +34,6 @@ A preview of the PCB front:
 
 ![The PCB preview](pcb.png?raw=true "The PCB preview")
 
+The devboard pinout.
+
+![The devboard pinout](esp.png?raw=true "The devboard pinout")
