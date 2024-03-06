@@ -267,23 +267,7 @@ void modeClock() {
 
 // Makes an LED go back and forth.
 void modePingPong() {
-  // Do we need to change dir?
-  if(registers.asInt & 1) {
-    pingPongLeft = true;
-  // 2147483648 = 2^31 i.e. highest bit on register set.
-  }
-  // Then shift.
-  if(pingPongLeft) {
-    registers.asInt = registers.asInt << 1;
-  } else {
-    registers.asInt = registers.asInt >> 1;
-  }
-  shiftOut32();
-  // Reverse other way?
-  if(registers.asInt & 2147483648) {
-    pingPongLeft = false;
-  }
-  delay(100);
+  
 }
 
 // Shows the device IP on the LEDS.

@@ -1,6 +1,9 @@
 #include "../modeInterface.h"
 #include <Arduino.h>
 
+/**
+ * Mode that makes a lit up led bounce across the register.
+*/
 class AllOn: public ModeInterface {
     private:
         /**

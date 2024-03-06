@@ -1,19 +1,18 @@
 #include "../modeInterface.h"
-#include <Arduino.h>
 
 /**
- * Mode that turns on all LEDs.
+ * Use this as a template to create a new mode.
 */
-class AllOn: public ModeInterface {
+class ModeTemplate: public ModeInterface {
     private:
         /**
-         * Mode id.
+         * Mode id, set by ModeManager. Treat as read-only.
         */
         uint8_t id = 0;
         /**
          * Name for this mode used to display to users.
         */
-       std::string friendlyName = "All on";
+       std::string friendlyName = "Mode template";
     public:
         /**
          * Called during setup.
@@ -26,10 +25,7 @@ class AllOn: public ModeInterface {
         /**
          * Called in the main loop when the mode is active.
         */
-        void loop(Registers& registers) {
-            registers.asInt = UINT32_MAX;
-            delay(100);
-        };
+        void loop(Registers& registers) {};
         /**
          * Called when the mode is deactivated (switched away from).
         */
