@@ -1,30 +1,49 @@
-#include "../modeInterface.cpp"
+#include "../modeInterface.h"
 #include <Arduino.h>
 
 class AllOn: public ModeInterface {
+    private:
+        /**
+         * Mode id.
+        */
+        uint8_t id = 0;
     public:
         /**
          * Name for this mode used to display to users.
         */
-        std::string friendlyName = "All on";
+        std::string getFriendlyName() {
+            return "All on";
+        }
+        /**
+         * Getter for mode id.
+        */
+        uint8_t getId() {
+            return id;
+        };
+        /**
+         * Setter for mode id.
+        */
+        void setId(uint8_t newId) {
+            id = newId;
+        };
 
         /**
          * Called during setup.
         */
-        virtual void setup(Registers* registers = nullptr) {};
+        void setup(Registers& registers) {};
         /**
          * Called when the mode is activated (switched to).
         */
-        virtual void activate(Registers* registers = nullptr) {};
+        void activate(Registers& registers) {};
         /**
          * Called in the main loop when the mode is active.
         */
-        virtual void loop(Registers* registers = nullptr) {
-            registers->asInt = UINT32_MAX;
+        void loop(Registers& registers) {
+            registers.asInt = UINT32_MAX;
             delay(100);
         };
         /**
          * Called when the mode is deactivated (switched away from).
         */
-        virtual void deactivate(Registers* registers = nullptr) {};
+        void deactivate(Registers& registers) {};
 };

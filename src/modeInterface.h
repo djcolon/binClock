@@ -1,5 +1,6 @@
+#pragma once
 #include <string>
-#include "registers.cpp"
+#include "registers.h"
 
 /**
  * Interface for the various modes binClock offers.
@@ -9,22 +10,29 @@ class ModeInterface {
         /**
          * Name for this mode used to display to users.
         */
-        std::string friendlyName = "";
-
+        virtual std::string getFriendlyName() = 0;
+        /**
+         * Getter for mode id.
+        */
+        virtual uint8_t getId() = 0;
+        /**
+         * Setter for mode id.
+        */
+        virtual void setId(uint8_t newId) = 0;
         /**
          * Called during setup.
         */
-        virtual void setup(Registers* registers = nullptr) = 0;
+        virtual void setup(Registers& registers) = 0;
         /**
          * Called when the mode is activated (switched to).
         */
-        virtual void activate(Registers* registers = nullptr) = 0;
+        virtual void activate(Registers& registers) = 0;
         /**
          * Called in the main loop when the mode is active.
         */
-        virtual void loop(Registers* registers = nullptr) = 0;
+        virtual void loop(Registers& registers) = 0;
         /**
          * Called when the mode is deactivated (switched away from).
         */
-        virtual void deactivate(Registers* registers = nullptr) = 0;
+        virtual void deactivate(Registers& registers) = 0;
 };
