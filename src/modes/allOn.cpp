@@ -7,26 +7,11 @@ class AllOn: public ModeInterface {
          * Mode id.
         */
         uint8_t id = 0;
-    public:
         /**
          * Name for this mode used to display to users.
         */
-        std::string getFriendlyName() {
-            return "All on";
-        }
-        /**
-         * Getter for mode id.
-        */
-        uint8_t getId() {
-            return id;
-        };
-        /**
-         * Setter for mode id.
-        */
-        void setId(uint8_t newId) {
-            id = newId;
-        };
-
+       std::string friendlyName = "All on";
+    public:
         /**
          * Called during setup.
         */
