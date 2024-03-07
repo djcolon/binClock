@@ -12,6 +12,12 @@ Built with an ESP32-C3 Mini, which I bought for 1.83
 
 [Built using PlatformIO](https://platformio.org/)
 
+## Testing
+
+To run tests you need to have configured the platformIO native environment.
+See the [platformIO guides](https://piolabs.com/blog/insights/unit-testing-part-1.html)
+for more detail.
+
 ## Board
 
 The PCB and schematic do not include the LEDs. An 8-pin connector is offered,

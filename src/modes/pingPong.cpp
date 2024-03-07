@@ -4,7 +4,7 @@
 /**
  * Mode that makes a lit up led bounce across the register.
 */
-class AllOn: public ModeInterface {
+class PingPong: public ModeInterface {
     private:
         /**
          * Mode id.

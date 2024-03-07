@@ -1,5 +1,6 @@
 #include <map>
 #include <stdexcept>
+#include <Arduino.h>
 #include "modeInterface.h"
 #include "registers.h"
 
@@ -20,25 +21,34 @@ class ModeManager {
         /**
          * A pointer to the mode currently active.
         */
-        ModeInterface* activeMode;
+        ModeInterface* activeMode = nullptr;
     public:
         /**
          * Registers a mode with the mode manager.
+         * Will set the first registered mode as active.
         */
         void registerMode(ModeInterface* mode) {
+            Serial.printf("Registering mode: %s.", mode->getFriendlyName());
             uint8_t id = ++idCounter;
             mode->setId(id);
-            modes.insert({id, mode});
+            modes[id] = mode;
+            if(activeMode == nullptr) {
+                Serial.println("Setting as active mode");
+                activeMode = mode;
+            }
         }
 
         /**
          * Runs setup() for every mode registered.
+         * Then runs activate on default mode, readying for operation.
         */
         void setup(Registers& registers) {
+            Serial.println("Setting up modes.");
             std::map<uint8_t, ModeInterface*>::iterator it;
             for(it = modes.begin(); it != modes.end(); it++) {
                 it->second->setup(registers);
             }
+            activeMode->activate(registers);
         }
 
         /**
@@ -80,6 +90,6 @@ class ModeManager {
          * Calls loop on the currently active mode.
         */
         void loopActiveMode(Registers& registers) {
-            activeMode->loop(registers);
+            modes[0]->loop(registers);
         }
 };
