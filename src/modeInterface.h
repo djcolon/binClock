@@ -6,22 +6,12 @@
  * Interface for the various modes binClock offers.
 */
 class ModeInterface {
-    private:
+    protected:
         /**
          * Mode id.
         */
         uint8_t id = 0;
-        /**
-         * Friendly name.
-        */
-       std::string friendlyName = "ModeInterface";
     public:
-        /**
-         * Name for this mode used to display to users.
-        */
-        std::string getFriendlyName() {
-            return friendlyName;
-        };
         /**
          * Getter for mode id.
         */
@@ -34,6 +24,10 @@ class ModeInterface {
         void setId(uint8_t newId) {
             id = newId;
         };
+        /**
+         * Name for this mode used to display to users.
+        */
+        virtual std::string getFriendlyName() = 0;
         /**
          * Called during setup.
         */

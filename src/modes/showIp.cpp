@@ -6,16 +6,13 @@
  * Show the ESP's ip.
 */
 class ShowIp: public ModeInterface {
-    private:
-        /**
-         * Mode id, set by ModeManager. Treat as read-only.
-        */
-        uint8_t id = 0;
+    public:
         /**
          * Name for this mode used to display to users.
         */
-       std::string friendlyName = "Show IP";
-    public:
+        std::string getFriendlyName() {
+            return "Show IP";
+        };
         /**
          * Called during setup.
         */

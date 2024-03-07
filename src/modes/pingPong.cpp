@@ -1,24 +1,20 @@
 #include "../modeInterface.h"
-#include <Arduino.h>
-
 /**
  * Mode that makes a lit up led bounce across the register.
 */
 class PingPong: public ModeInterface {
     private:
         /**
-         * Mode id.
+         * Whether the lit up LED is moving left or right (up or down)
         */
-        uint8_t id = 0;
+        bool pingPongLeft = true;
+    public:
         /**
          * Name for this mode used to display to users.
         */
-       std::string friendlyName = "Ping Pong";
-       /**
-        * Track which way we're moving.
-       */
-        bool pingPongLeft = true;
-    public:
+        std::string getFriendlyName() {
+            return "Ping pong";
+        };
         /**
          * Called during setup.
         */
@@ -51,7 +47,6 @@ class PingPong: public ModeInterface {
             if(registers.asInt & 2147483648) {
                 pingPongLeft = false;
             }
-            delay(100);
         };
         /**
          * Called when the mode is deactivated (switched away from).

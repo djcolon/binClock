@@ -18,6 +18,9 @@ To run tests you need to have configured the platformIO native environment.
 See the [platformIO guides](https://piolabs.com/blog/insights/unit-testing-part-1.html)
 for more detail.
 
+After installation, run tests by navigating to `native > advanced > test` in the
+platformIO sidebar.
+
 ## Board
 
 The PCB and schematic do not include the LEDs. An 8-pin connector is offered,

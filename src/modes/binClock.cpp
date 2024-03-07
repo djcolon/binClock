@@ -9,14 +9,6 @@
 class BinClock: public ModeInterface {
     private:
         /**
-         * Mode id, set by ModeManager. Treat as read-only.
-        */
-        uint8_t id = 0;
-        /**
-         * Name for this mode used to display to users.
-        */
-       std::string friendlyName = "Mode template";
-        /**
          * The timezone for the clock.
         */
        std::string timezone = "GMT0BST,M3.5.0/1,M10.5.0;";
@@ -29,6 +21,12 @@ class BinClock: public ModeInterface {
             tzset();
         }
     public:
+        /**
+         * Name for this mode used to display to users.
+        */
+        std::string getFriendlyName() {
+            return "Binary clock";
+        };
         /**
          * Called during setup.
         */

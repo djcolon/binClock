@@ -1,6 +1,5 @@
 #include <map>
 #include <stdexcept>
-#include <Arduino.h>
 #include "modeInterface.h"
 #include "registers.h"
 
@@ -28,12 +27,10 @@ class ModeManager {
          * Will set the first registered mode as active.
         */
         void registerMode(ModeInterface* mode) {
-            Serial.printf("Registering mode: %s.", mode->getFriendlyName());
-            uint8_t id = ++idCounter;
+            uint8_t id = idCounter++;
             mode->setId(id);
             modes[id] = mode;
             if(activeMode == nullptr) {
-                Serial.println("Setting as active mode");
                 activeMode = mode;
             }
         }
@@ -43,7 +40,6 @@ class ModeManager {
          * Then runs activate on default mode, readying for operation.
         */
         void setup(Registers& registers) {
-            Serial.println("Setting up modes.");
             std::map<uint8_t, ModeInterface*>::iterator it;
             for(it = modes.begin(); it != modes.end(); it++) {
                 it->second->setup(registers);
@@ -90,6 +86,12 @@ class ModeManager {
          * Calls loop on the currently active mode.
         */
         void loopActiveMode(Registers& registers) {
-            modes[0]->loop(registers);
+            activeMode->loop(registers);
+        }
+        /**
+         * Returns the highest index of any registered mode.
+        */
+        uint8_t getHighestModeIndex() {
+            return idCounter;
         }
 };

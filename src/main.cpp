@@ -146,7 +146,7 @@ void setupModeManager() {
   modeManager.registerMode(&binClock);
   modeManager.registerMode(&pingPong);
   modeManager.registerMode(&showIp);
-  modeManager.registerMode(&allOn);
+  modeManager.registerMode(new AllOn());
   modeManager.setup(registers);
   registers.asInt = 0b00100000;
   shiftOut32();
