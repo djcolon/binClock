@@ -47,12 +47,6 @@ Registers registers;
 
 ModeManager modeManager;
 
-// Modes
-BinClock binClock;
-PingPong pingPong;
-ShowIp showIp;
-AllOn allOn;
-
 // Other globals
 // Brightness is inverted!
 uint8_t brightness = 0;
@@ -143,9 +137,9 @@ void setupMdns() {
  * Initialises modes. Add custom modes here.
 */
 void setupModeManager() {
-  modeManager.registerMode(&binClock);
-  modeManager.registerMode(&pingPong);
-  modeManager.registerMode(&showIp);
+  modeManager.registerMode(new BinClock());
+  modeManager.registerMode(new PingPong());
+  modeManager.registerMode(new ShowIp());
   modeManager.registerMode(new AllOn());
   modeManager.setup(registers);
   registers.asInt = 0b00100000;
@@ -217,7 +211,9 @@ void setup() {
 */
 void loop() {
   modeManager.loopActiveMode(registers);
+  shiftOut32();
   // Process buttons.
   button1.read();
   button2.read();
+  delay(100);
 }
