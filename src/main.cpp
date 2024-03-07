@@ -210,10 +210,9 @@ void setup() {
  * Main application loop.
 */
 void loop() {
-  modeManager.loopActiveMode(registers);
+  modeManager.loopActiveMode(registers, millis());
   shiftOut32();
   // Process buttons.
   button1.read();
   button2.read();
-  delay(100);
 }

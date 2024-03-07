@@ -70,8 +70,30 @@ TEST(TestModeManager, TestLoop) {
     ModeManager modeManager;
 
     modeManager.registerMode(new AllOn());
-    modeManager.loopActiveMode(registers);
+    modeManager.setup(registers);
+
+    modeManager.loopActiveMode(registers, 10);
+
     EXPECT_EQ(registers.asInt, UINT32_MAX);
+}
+
+/**
+ * Tests loop non-blocking delay works.
+*/
+TEST(TestModeManager, TestLoopDelay) {
+    Registers registers;
+    registers.asInt = 0;
+    ModeManager modeManager;
+
+    modeManager.registerMode(new PingPong());
+    modeManager.setup(registers);
+
+    modeManager.loopActiveMode(registers, 0);
+    EXPECT_EQ(registers.asInt, (uint64_t)0b00000001);
+    modeManager.loopActiveMode(registers, 100);
+    EXPECT_EQ(registers.asInt, (uint64_t)0b00000001);
+    modeManager.loopActiveMode(registers, 201);
+    EXPECT_EQ(registers.asInt, (uint64_t)0b00000010);
 }
 
 int main(int argc, char **argv)

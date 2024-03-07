@@ -16,11 +16,15 @@ class PingPong: public ModeInterface {
             return "Ping pong";
         };
         /**
+         * Returns the delay in ms between runs of loop for module.
+        */
+        uint16_t getLoopDelay() {
+            return 100;
+        };
+        /**
          * Called during setup.
         */
-        void setup(Registers& registers) {
-
-        };
+        void setup(Registers& registers) {};
         /**
          * Called when the mode is activated (switched to).
         */

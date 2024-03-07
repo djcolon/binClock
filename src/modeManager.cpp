@@ -12,15 +12,22 @@ class ModeManager {
          * Track ids assigned to modes.
         */
         uint8_t idCounter = 0;
+
         /**
          * A map of all modes registered with the manager mapped to their
          * ids.
         */
         std::map<uint8_t, ModeInterface*> modes;
+
         /**
          * A pointer to the mode currently active.
         */
         ModeInterface* activeMode = nullptr;
+
+        /**
+         * Track last loop runtime.
+        */
+       unsigned long lastLoopTime = 0;
     public:
         /**
          * Registers a mode with the mode manager.
@@ -67,6 +74,8 @@ class ModeManager {
             activeMode = modes.at(newModeId);
             // Then init it.
             activeMode->activate(registers);
+            // Clear timer so new mode always runs immediately.
+            lastLoopTime = 0;
         }
 
         /**
@@ -85,9 +94,17 @@ class ModeManager {
         /**
          * Calls loop on the currently active mode.
         */
-        void loopActiveMode(Registers& registers) {
-            activeMode->loop(registers);
+        void loopActiveMode(Registers& registers, uint32_t millis) {
+            // Check the time.
+            // Fire if the loop delay has passed.
+            if(
+                millis > lastLoopTime + (activeMode->getLoopDelay())
+            ) {
+                activeMode->loop(registers);
+                lastLoopTime = millis;
+            }
         }
+
         /**
          * Returns the highest index of any registered mode.
         */

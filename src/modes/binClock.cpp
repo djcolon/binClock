@@ -28,6 +28,12 @@ class BinClock: public ModeInterface {
             return "Binary clock";
         };
         /**
+         * Returns the delay in ms between runs of loop for module.
+        */
+        uint16_t getLoopDelay() {
+            return 100;
+        };
+        /**
          * Called during setup.
         */
         void setup(Registers& registers) {
@@ -58,8 +64,6 @@ class BinClock: public ModeInterface {
             registers.asStruct.register1 = timeinfo.tm_hour;
             registers.asStruct.register2 = timeinfo.tm_min;
             registers.asStruct.register3 = timeinfo.tm_sec;
-
-            delay(100);
         };
 
         /**

@@ -29,6 +29,10 @@ class ModeInterface {
         */
         virtual std::string getFriendlyName() = 0;
         /**
+         * Returns the delay between runs of loop for module.
+        */
+        virtual uint16_t getLoopDelay() = 0;
+        /**
          * Called during setup.
         */
         virtual void setup(Registers& registers) = 0;

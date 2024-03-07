@@ -14,6 +14,12 @@ class ShowIp: public ModeInterface {
             return "Show IP";
         };
         /**
+         * Returns the delay in ms between runs of loop for module.
+        */
+        uint16_t getLoopDelay() {
+            return 1000;
+        };
+        /**
          * Called during setup.
         */
         void setup(Registers& registers) {};
