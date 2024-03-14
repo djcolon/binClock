@@ -31,6 +31,10 @@ via the ESP32's USB-C connector.
 
 ## Images
 
+The assembled PCB:
+
+![The assembled PCB](assembled_pcb.jpg?raw=true "The assembled PCB")
+
 The prototype:
 
 ![The prototype](prototype.jpg?raw=true "The prototype")
