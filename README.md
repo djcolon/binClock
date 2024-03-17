@@ -31,22 +31,22 @@ via the ESP32's USB-C connector.
 
 ## Images
 
-The assembled PCB:
+The assembled binClock:
 
-![The assembled PCB](assembled_pcb.jpg?raw=true "The assembled PCB")
+![The assembled binClock](images/binClock.jpg?raw=true "The assembled binClock")
 
 The prototype:
 
-![The prototype](prototype.jpg?raw=true "The prototype")
+![The prototype](images/prototype.jpg?raw=true "The prototype")
 
 The schematic:
 
-![The schematic](schematic.png?raw=true "The schematic")
+![The schematic](images/schematic.png?raw=true "The schematic")
 
 A preview of the PCB front:
 
-![The PCB preview](pcb.png?raw=true "The PCB preview")
+![The PCB preview](images/pcb.png?raw=true "The PCB preview")
 
 The devboard pinout.
 
-![The devboard pinout](esp.png?raw=true "The devboard pinout")
+![The devboard pinout](images/esp.png?raw=true "The devboard pinout")
