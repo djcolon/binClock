@@ -2,6 +2,8 @@
 
 **Daniel Colon - 19/02/2024**
 
+![binClock](images/animated.gif?raw=true "binClock")
+
 A binary clock using an ESP8266 board with some 74HC595 shift registers to
 drive LEDs.
 Uses NTP to get time over the network.
