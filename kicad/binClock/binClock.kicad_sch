@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "binClock")
-		(date "2024-03-01")
-		(rev "1")
+		(date "2024-03-17")
+		(rev "1.0.2")
 		(company "Daniel Colon")
 	)
 	(lib_symbols
